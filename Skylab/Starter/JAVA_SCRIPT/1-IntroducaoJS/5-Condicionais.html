@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Curso Java Script</title>
+</head>
+<body>
+<script>
+    //javaScript
+    function retornaSexo(sexo){
+        //recebe M, F
+        //retorna 'Masculino' ou 'Feminino'
+
+        // "==" é para verificar se as coisas coisas comparadas tem o mesmo VALOR(portanto retorna True na condição (1=='1'))
+        //"===" é para verificar tanto o valor quanto o tipo das variáveis (retornaria False para o caso acima)
+        if(sexo=='M'){
+            return('Masculino')
+        }
+        else if (sexo=='F'){
+            return('Feminino');
+        }
+        else{
+            return('Outro');
+        }
+    }
+
+    function retornaSwitch(sexo){
+        switch(sexo){
+            case 'M':
+                return 'Masculino';
+                break;
+
+            case 'F':
+                return 'Feminino';
+                break;
+
+            default:
+                return 'Outro';
+        }
+    }
+
+    var resultado = retornaSexo('M');
+    console.log(resultado);
+
+    var resultado2 = retornaSwitch('Ags');
+    console.log(resultado2);
+
+</script>
+</body>
+</html>

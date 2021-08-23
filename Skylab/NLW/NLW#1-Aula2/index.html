@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- <> indica o inicio uma tag e </> indica o fechamento -->
+
+<!--
+    HTML
+    HyperText: hiper texto (link para redirecionar para outras paginas
+
+    Markup: Marcação de texto
+
+    Language: Linguagem
+-->
+
+<html lang="pt_br"><!--indica a linguagem da pagina na tag html-->
+    <head>
+        <!-- a tag meta configura os metadados da página -->
+        <meta charset="UTF-8"><!-- charset configura o padrão dos caracteres exibidos -->
+
+        <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+        <!--viwepoint permite a página a se enquadrar no tamanho do dispositivo (importante para mobile)-->
+
+        <title>Ecoleta</title><!-- Tag do titulo da página (o nome que mostra na aba do navegador -->
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="styles/main.css"><!--mostra o caminho para os arquivos css-->
+        <link rel="stylesheet" href="styles/home.css">
+
+        <link rel="stylesheet" href="styles/responsive.css"><!--Responsivo por ultimo-->
+
+    </head>
+
+    <body>
+
+        <div id="page-home">
+
+            <div class="content">
+
+                <header>
+                    <!--<h3 class="red">Ecoleta</h3>-->
+                    <img src="assets/icones/logo.svg" alt="Logomarca"><!--alt funciona para acessibilidade ou para alternativa caso a imagem não carregue-->
+                    <a href="https://google.com">
+                        <span> </span>
+                        Pesquisar um ponto de coleta
+                    </a><!--tag de hiperlink, href indica o caminho seguido ao clicar no hiperlink-->
+
+                </header>
+
+                <main>
+
+                    <h1 class="red">Seu Marketplace de coleta de residuos</h1>
+
+                    <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente</p><!-- adiciona um paragrafo -->
+
+                    <a href="#"><span></span><strong>Pesquisar pontos de coleta</strong></a>
+                    <!--<button></button> adiciona um botão -->
+                </main>
+            </div>
+        </div>
+    </body>
+</html>

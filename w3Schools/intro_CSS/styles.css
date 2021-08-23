@@ -1,0 +1,119 @@
+/*
+CSS significa Cascading Style Sheets.
+Ele descreve como os elementos HTML serão expostos na tela.
+Pode também salvar muito trabalho, pois pode ser aplicado a varias paginas de uma vez.
+Stylesheetss externos são armazenados em arquivos .css.
+
+-----------------------------------------------------------------------------------------
+
+>>>SINTAXE:
+
+O padrão do CSS consiste em: um seletor e um bloco de declaração.
+Ex:
+        h1  {color:blue, font-size:12px;}
+         ^     ^     ^       ^       ^
+    Seletor    |     Valor   |      Valor
+            Propriedade      Propriedade
+
+O seletor indica o elemento HTML que será estilizado.
+O bloco de declaração (tudo que está entre as chaves) contém uma ou mais declarações.
+Cada declaração inclue uma propriedade CSS, nome e valor.
+Ex:
+    p {
+    color: red;
+    text-align: center;
+    }
+
+    Neste exemplo, todos os elementos <p> terão a cor vermelha e serão alinhados ao centro;
+    p é o seletor;
+    color é a propriedade e red é o valor;
+    text-align é a propriedade e center é o valor.
+
+--------------------------------------------------------------------------------------------
+
+>>>SELETORES:
+
+Seletores do CSS são utilizados para achar ou selecionar elementos HMTL a que se deseja estilizar.
+Esetes seletores podem ser divididos em 5 categorias:
+
+    -Seletores Simples: Selecionam elementos com base em nome, id ou classe;
+    -Seletores Combinados: Selecionam elementos baseado em uma relação específica entre eles;
+    -Seletores de Pseudo-classe: Selecionam elementos baseado em um certo "estado";
+    -Seletores de Pseudo-elementos: Selecionam e estilizam parte de um elemento;
+    -Seletores de Atributos: Selecionam elementos baseado no atributo ou valor de atributo.
+
+Para selecionar um elemento, basta seguir o exemplo: p{}.
+Para selecinar um id, é preciso ter um elemento HTML com um id já atribuido.
+    Ex: #para1{}
+Para selecionar uma classe, é preciso ter um elemento HTML com uma classe já atribuida.
+    EX: .center{}
+
+É possível especificar que só elementos especificos do HTML serão afetados pela classe:
+    Ex:
+        p.center {
+            text-align: center;
+            color: red;
+        }
+Ou fazer elementos remeterem a mais de uma classe.
+    Ex: <p class="center large">This paragraph refers to two classes.</p>
+
+O Seletor universal seleciona todos os elementos HTML da página:
+    ex:
+        * {
+          text-align: center;
+          color: blue;
+        }
+
+É possível agrupar seletores que contém as mesmas características para tornar o código mais limpo:
+    Ex:
+          h1, h2, p {
+              text-align: center;
+              color: red;
+          }
+
+ */
+
+body{
+    background-color: #ffffff;
+    background-image: url("assets/workplace.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+#BM{
+    text-align: center;
+    font-weight: bold;
+    background-color: green;
+    opacity: 0.3;
+}
+/*
+p{
+    background-image: url("assets/w3schools.jpg");
+    background-repeat: no-repeat;
+}
+ */
+
+#borda{
+    text-align: center;
+    border: black;
+    border-style: dashed;
+    border-width: 5px 10px;
+}
+/*
+#myHeader{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+}
+Forma reduzida:*/
+
+#myHeader{
+    margin: 100px 150px 100px 80px;
+}
+
+#pad{
+    padding: 70px;
+    border: 5px;
+    border-style: solid;
+}

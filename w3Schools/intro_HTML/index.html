@@ -1,0 +1,520 @@
+<!--
+>>>ELEMENTOS:
+Elementos em HTML são definidos por uma tag de abertura, algum conteúdo e a tag de fechamento.
+    Ex: <nomeTag> Conteúdo aqui </nomeTag>
+
+Alguns elementos não possuem contúdo, estes são chamados de elementos vazios e não precisam de tag de fechamento
+    Ex: tag <br> (quebra de linha)
+
+Elementos estarão poderão estar contidos uns nos outros ("h1" está contido em "body" que está contido em "html"),
+formando assim uma espécie de "árvore".
+
+-------------------------------------------------------------
+
+>>>ATRIBUTOS:
+Qualquer elemento em html pode conter atributos; Estes fornecem informação adicional sobre o seu elemento.
+Os atributos sempre são especificados na tag de início.
+geralmente os atributos vem em "pares" de nome/valor, Ex: <tag nome="valor">.
+
+-------------------------------------------------------------
+
+>>>HEADINGS:
+Headings são títulos ou subtítulos daquilo que se deseja mostrar na página;
+Há uma hierarquia onde h1 é o mais importante e h6, o de menor importância;
+Os browsers adcionam um espaço automaticamente antes e depois de cada heading;
+
+Os mecanismos de busca utilizam os headings da página para categorizá-la, portanto é importante usálos para mostrar a estrutura do documento;
+h1 deve ser usado para os assuntos principais, seguidos dos headings h2 que têm um pouco menos de importancia e assim por diante;
+É possivel mudar o tamanho da fonte do heading usando o atributo css "style";
+
+-------------------------------------------------------------
+
+>>>PARAGRAFOS
+Um paragrafo <p> sempre começa em uma nova linha e o browser adiciona um espaço antes e depois de cada um;
+Uma tag <hr> adiciona uma "régua horizontal", geralmente usado para separar conteúdos.
+<br> é uma tag utilizada para quebrar ou pular uma linha;
+
+Porém <p> irá ignorar os espaços a mais ou as quebras de linhas (que não são feitas com a tag <br>),
+para isso utiliza-se a tag <pre> (formato predefinido), que preserva tanto os espaços quanto as quebras de linha.
+
+-------------------------------------------------------------
+
+>>>ESTILOS E CORES
+O atributo <style> tem a função de atribuir um estilo visual ao elemento, como fonte, cor tamanho e etc
+
+Uma cor pode ser especificada em HTML tanto por nomes predefinidos quanto por RGB, HEX, HSL, RGBA, ou HSLA
+
+Estilos com CSS:
+    CSS significa Cascading Style Sheets. Ele pode salvar muito tempo de trabalho pois pode controlar o
+    layout de varias páginas de uma vez só.
+
+Com CSS, é possivel controlar a cor, fonte, tamanho do texto, espaçamento entre elementos, como elementos são
+posicionados, imagens de fundo ou cores de fundo, diferentes displays para
+diferentes dispositivos e tamanhos de tela, etc.
+
+ATENÇÃO: O Significado de "Cascadig" é que, tudo aquilo que for aplicado a uma tag pai será aplicado também para
+as tags filhas
+
+O CSS pode ser utilizado no HTML de 3 formas:
+    1-Inline: utilizando o atributo <style> em elementos HTML;
+    2-Interno: Utilizando o atributo <style> dentro da tag <head>;
+    3-Externo: Utilizando o elemento <link> para ligar o documento HTML a um documento CSS.
+
+O CSS Externo é o mais utilizado e com esta forma é possivel mudar a aparência do site inteiro apenas com um documento
+.css
+É possível também fazer um link para o .css que esteja disponível em um site
+
+--------------------------------------------------------------
+
+>>>LINKS
+Links podem ser encontrados em quase todas as webpages. Eles permitem que usuários naveguem de pagina em pagina.
+Os links do HTML são hiperlinks.
+
+Importante: Os links podem ser tanto texto quanto imagem ou qualquer outro elemnto HTML.
+
+A tag <a> define um hiperlink. Sua sintaxe é a seguinte:
+    <a href="url">Texto do link</a>
+
+O atributo mais importante do elemento <a> é o "href", que indica o destino do link.
+O atributo target especifica onde o documento linkado deve ser aberto. Ele pode ter um dos seguintes valores:
+    _self : Padrão. Abre o documento na mesma janela/tab em que foi clicado.
+    _blank : Abre o documento em uma nova janela ou tab.
+    _parent : Abre o documento no "parent frame".
+    _top : Abre o documento no "full body" da janela.
+
+Existem dois tipos de URL: Absolutas e Relativas.
+    A URL absoluta indica o caminho na internet para o documento (com o https://www)
+    A URL relativa é usada para indicar uma pagina no mesmo site.
+
+Para utilizar uma imagem como link, é preciso simplesmente colocar a tag <img> dentro da tag <a>.
+
+Para utilizar um botao como link, é preciso utilizar um pouco de JavaScript.
+
+Título do link:
+    o atributo "title" especifica informações extra sobre um elemento. Geralemnte esta informação é mostrada como
+    um "tooltip text" quando se passa o mouse por cima do elemento.
+
+BookMarks:
+    É possível criar um link para um capítulo ou página específica no documento HTML.
+    Utiliza-se o atributo "id" para criar a bookmark.
+    depois utiliza-se a tag <a> para linkar ao id.
+    Ex:
+    <h2 id="C4">Chapter 4</h2>
+    <a href="#C4">Jump to Chapter 4</a>
+
+-----------------------------------------------------------------------------
+
+>>>IMAGENS
+
+A tag <img> é utilizada para colocar uma imagem na sua página.
+Ela tem dois atributos:
+    src : Especifíca onde a imagem se encontra
+    alt : Cria um texto alternativo caso a imagem não carregue ou para inclusão de deficientes.
+Sintaxe:
+    <img src="url" alt="alternatetext">
+
+Altura e largura das imagens:
+    É possível usar o atributo "style" para formatar a imagem à sua vontade, por Ex:
+        <img src="img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;">
+
+    É possivel também utilizar os atribudos "height" e "width" para isso:
+        <img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+
+    É importante sempre especificar a altura e largura da imagem para que não haja erros de carregamento na pagina.
+
+    É preferível utilizar o atributo "style" para formatar a imagem, pois assim não há a possibilidade de haver conflitos
+    com o arquivo .css.
+
+Float de imagem:
+    É possivel utilizar a propriedade CSS "float" para q a imagem "flutue" ao lado do texto.
+
+Mapas de imagem:
+    Um mapa de imagem é uma imagem que contém diversas áreas clicáveis que podem levar para diferentes lugares.
+    a tag para criar este mapa é <map>.
+
+    Primeiro é preciso inserir a imagem com a tag <img>. Para transforma-la em um paga, utiliza-se o atributo "usemap"
+    ex: <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+
+    As áreas clicáveis são definidas pelo elemento <area>.
+    Também é necesário fornecer as coordenadas que delimitam a área.
+    O formato da área é definido pelos seguintes valores:
+
+        rect : região retangular;
+            Quando utiliza-se shape="rect", é preciso fornecer duas coordenadas, e um retangulo será formado entre elas.
+            Ex: <area shape="rect" coords="34, 44, 270, 350" href="computer.htm">
+
+        circle : região circular;
+            Para formar uma região circular(shape="circle"), é preciso fornecer a coordenada do centro do círculo e o raio que ele terá.
+            Ex: <area shape="circle" coords="337, 300, 44" href="coffee.htm">
+
+        poly : região poligonal;
+            Uma região poligonal (shape="poli") pode ter muitos pontos cartesianos, esta é utilizada para criar diversos formatos.
+            Ex:
+            <area shape="poly" coords="140,121,181,116,204,160,204,222,191,270,140,329,85,355,58,352,37,322,40,259,103,161,128,147" href="croissant.htm">
+
+        default : define a região inteira.
+
+    O mapa de imagens pode ativar funções do JS também, basta adicionar um evento "click" no elemnto <area>
+
+Imagens de fundo:
+    Para adicionar uma imagem de fundo em um elemento HTML, utiliza-se o atrbuto CSS <style> para adicionar
+    imagens de fundo, utilizando a propriedade background-image.
+    Ex: <div style="background-image: url('img_girl.jpg');">
+
+    Para adicionar a imagem de fundo na página inteira, basta colocar <style> no elemento <body>.
+
+    Se a imagem for menor que o element, ela irá se repetir até o fim do elemento.
+    Se a intenção não for esta, é necessário atribuir à propriedade "background-repeat" o valor "no-repeat"
+    ex:
+        <style>
+        body {
+            background-image: url('example_img_girl.jpg');
+            background-repeat: no-repeat;
+            }
+        </style>
+
+    Para fazer com que o background cubra toodo o elemento, deve-se setar "background-size" para "cover".
+    Para se certificar que o elemento estará sempre com o fundo, deve-se setar "background-attachment" para "fixed"
+    Assim, a imagem do fundo também não será distorcida.
+    Ex:
+        <style>
+        body {
+          background-image: url('img_girl.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+        </style>
+
+    Se a intenção for de distorcer a imagem do fundo, basta setar "background-size" para "100% 100%"
+    Ex:
+        <style>
+        body {
+          background-image: url('img_girl.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+        </style>
+
+O elemento <picture>:
+
+Este elemnto permite que sejam mostradas diferentes imagens para diferentes dispositivos ou tamanhos de tela.
+Ele permite para o desenvolvedor mais flexibilidade ao especificar recursos de imagem.
+
+Cada elemento <picture> contém um ou mais elemnto <source>, cada um se referindo a uma imagem diferente através do
+atributo "srcset". Desta forma o browser pode selecionar a imagem que se enquadra melhor a cada dispositivo.
+ex:
+   <picture>
+      <source media="(min-width: 650px)" srcset="img_food.jpg">
+      <source media="(min-width: 465px)" srcset="img_car.jpg">
+      <img src="img_girl.jpg">
+    </picture>
+
+IMPORTANTE: Sempre especificar uma tag <img> como ultimo elemento filho do elemento <picture>. Este será utilizado caso
+o browser não tenha suporte para o elemento <picture>.
+
+Quando utilizar este elemento:
+    1- Quando se tem um dispositivo com tela pequena, que não precisará carregar uma imagem grande.
+    2- Alguns browsers não suportam todos os tipos de imagem. Com <picture> é possível adicionar imagens de todos os formatos.
+
+-------------------------------------------------------------------------------------------------
+
+>>>TABELAS:
+
+As tabelas são uma boa forma de organizar informações.
+Utiliza-se a tag <table> para criar uma tabela.
+
+Cada linha da tabela é deinida por uma tag <tr>;
+Cada cabeçalho da tabela é definido por uma tag <th>; -> (por padrão em negrito e centralizado)
+A informação contida em cada célula é definida pela tag <td>; -> (por padrão alinhados à esquerda)
+
+É possível adicona bordas utilizando o CSS.
+
+---------------------------------------------------------------------------------------------------
+
+>>>LISTAS:
+
+Uma lista sem ordem é iniciada pela tag <ul>.
+Uma lista "ordenada" começa com a tag <ol>.
+
+    Cada item da lista inicia pela tag <li>.
+
+Uma lista com descrições inicia com a tag <dl>.
+
+    <dt> define o termo ou nome do item.
+    <dd> define a descrição deste item.
+
+---------------------------------------------------------------------------------------------------
+
+>>>Elementos em "Bloco" e 'Inline":
+
+Elementos em bloco sempre começam em uma linha e tomam esta linha inteira para si mesmos (por exemplo o elemento <div>.
+Elementos "Inline" não começam de uma nova linha e tomam apena o espaço que é necessário para eles.
+
+Nota: um elemento Inline não pode conter um elemento em Bloco.
+
+O elemento <div> é um elemento Inline. Ele é frequentemente utilizado para conter outros elemntos do documento HTML.
+Ele não necessita de atributos, mas "style" "class" e "id" são muito comuns.
+Ele é muito útil aliado ao CSS, utilizado para formatar blocos inteiros de uma vez.
+
+O elemento <span> é um elemento Inline que geralemnte é utilizado para conter uma marcação de texto ou parte do documento.
+ele também não necessita de atributos, mas "style" "class" e "id" são muito comuns.
+
+--------------------------------------------------------------------------------------------------------
+
+>>>ATRIBUTO class:
+
+O Atributo class do HTML é utilizado para especificar a classe de algum elmento. Varios elementos podem utilizar a mesma classe.
+Ele normalmente é utilizado para apontar o nome da classe no "style sheet", mas também pode ser utilizado no JS para
+que se possa acessar e manipular elemntos com nomes de classe específico.
+
+Este atributo pode ser usado em QUALQUER elemento HTML. O nome da classe é Case Sensitive.
+
+----------------------------------------------------------------------------------------------------------
+
+>>>ATRIBUTO id
+
+O atributo id é usado para especificar um id único para um elemento HTML. Não é possível que dois elementos compartilhem o mesmo id.
+
+-----------------------------------------------------------------------------------------------------------
+
+>>>IFRAME
+
+O iframe serve para que se mostre um pagina da web dentro da pagina da web.
+Sintaxe:<iframe src="url" title="description">
+
+-->
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt_br"> <!--O elemento html é o "elemento raiz": ele dá a definição de o que está contido no documento html -->
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--- Exemplo de CSS Interno:
+    <style>
+        body {background-color: powderblue;}
+        h1   {color: blue;}
+        p    {color: red;}
+    </style>
+    --->
+
+    <!---Exemplo de CSS externo:
+
+    <link rel="stylesheet" href="styles.css">
+    --->
+
+    <style>/*exemplo de utilização de classe no style sheet */
+        .city {
+            background-color: tomato;
+            color: white;
+            border: 2px solid black;
+            margin: 20px;
+            padding: 20px;
+        }
+
+    #myHeader {
+        background-color: lightblue;
+        color: black;
+        padding: 40px;
+        text-a
+    </style>
+</head>
+
+<body><!--O elemento body é onde todo o conteúdo da página está contido-->
+    <h1>This is a heading</h1>
+    <p>This is a paragraph</p>
+    <br> <!--a tag br server para pular uma linha-->
+    <p>This is a paragraph <br> with a line break</p>
+
+    <pre>
+        This is a paragraph,
+        but done with
+        the    "pre"    tag
+    </pre>
+
+    <a href="#BM">Pular para bookmark</a>
+    <br>
+    <a href="https://www.w3schools.com">THIS IS A LINK</a><!--O ATRIBUTO href especifica qual o destino do link-->
+
+
+    <img src="assets/w3schools.jpg" alt="W3Schools.com" width="104" height="142"><!--imagens são definidas pela tag <img>-->
+    <!--
+    O atributo (obrigatorio) src determina o endereço onde a imagem será "buscada";
+    alt referencia o texto alternativo que será mostrado caso a imagem não carregue ou o texto que será lido com a opção de acessibilidade;
+    é sempre bom especificar a largura e altura da imagem utilizando os atributos "width" e "height".
+    -->
+
+    <p style="color:red;">This is a red paragraph</p>
+    <!-- o atributo "style" estiliza algo no elemnto;
+    Ele segue o seguinte padrão: <tagname style="property:value;">
+    Onde property é uma propriedade CSS e value é um valor CSS;
+    -->
+
+    <h2 style="background-color: blueviolet;">This is a heading with a background color</h2>
+    <!--
+    A propriedade background-color também é um atrib. CSS
+    -->
+
+    <h2 style="font-family:Verdana;">This is a heading with Verdana font</h2>
+    <!--
+    A propriedade CSS "font-family" define a fonte a ser usada em um elemento.
+    -->
+
+    <h2 style="font-size:300%;">This is a heading with a bigger font</h2>
+    <!--Font size determina o tamanho da fonte (CSS)-->
+
+    <h1 style="text-align:center;">Centered Heading</h1>
+    <p style="text-align:center;">Centered paragraph</p>
+
+    <!--
+    ELEMENTOS DE FORMATAÇÃO:
+    <b> Bold(negrito)
+    <strong> Texto importante
+    <i> Italico
+    <em> Texto enfatizado
+    <mark> Texto marcado
+    <small> Texto diminuido
+    <del> Texto deletado (riscado)
+    <ins> Texto inserido (geralmente sublinhado)
+    <sub> Texto inferior
+    <sup Texto superior
+
+    ELEMENTOS DE CITAÇÃO:
+    <blockquote> Define uma seção que é citada de outra fonte
+    <q> Define uma uma citação curta. Browsers geralmente inserem aspas no conteúdo dessa tag
+    <abbr> Define uma abreviação ou acronimo como HTML, CSS, Dr. etc..(Pode dar informações úteis para o browser e search-engines;
+    mostra o significado ao passar o mouse por cima.
+    <address> Define a informação de contato para o autor/dono do documento ou artigo, pode ser URL, e-mail, telefone, rede social etc
+    <cite>Define o TÍTULO de alguma obra citada.
+    <bdo>Define a direção do texto. Por exemplo, colocar o que está escrito dentro desta tag de trás para frente
+
+    -->
+    <p>this is an <abbr title="Abreviated Paragraph">AP</abbr></p>
+
+    <bdo dir="rtl">This text will be written from right to left</bdo>
+
+    <h1 style="color: red">A cor do texto pode ser alterada assim</h1> <!---Exemplo de CSS Inline --->
+    <h1 style="background-color: blueviolet">A cor do fundo pode ser alterada também</h1>
+    <h1 style="background-color:rgba(255, 99, 71, 0);">rgba(255, 99, 71, 0)</h1>
+    <h1 style="background-color:#ffa500;">#ffa500</h1>
+
+    <a href="https://www.w3schools.com/">Visit W3Schools.com!</a><!--- Isto é um link --->
+    <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
+
+    <!--- URLs Relativa x Absoluta:--->
+    <h2>Absolute URLs</h2>
+    <p><a href="https://www.w3.org/">W3C</a></p>
+    <p><a href="https://www.google.com/">Google</a></p>
+
+    <h2>Relative URLs</h2>
+    <p><a href="html_images.asp">HTML Images</a></p>
+    <p><a href="/css/default.asp">CSS Tutorial</a></p>
+
+    <!---Exemplo de imagem como link:--->
+    <a href="default.asp">
+        <img src="assets/w3schools.jpg" alt="HTML tutorial" style="width:42px;height:42px;">
+    </a>
+
+    <!--- Exemplo atributo title:--->
+    <a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>
+
+    <h2 id="BM">Bookmark aqui</h2>
+
+    <!---Exemplo de imagem flutuante:--->
+    <p><img src="assets/w3schools.jpg" alt="Smiley face" style="float:right;width:42px;height:42px;">
+        The image will float to the right of the text.</p>
+
+    <p><img src="assets/w3schools.jpg" alt="Smiley face" style="float:left;width:42px;height:42px;">
+        The image will float to the left of the text.</p>
+
+    <!--- Exemplo de mapa de imagem:--->
+    <img src="assets/workplace.jpg" alt="Workplace" usemap="#workmap">
+
+    <map name="workmap">
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+        <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+    </map>
+
+    <!--- exemplo de funcionamento com JS:--->
+    <map name="workmap">
+        <area shape="circle" coords="337,300,44" onclick="myFunction()">
+    </map>
+
+    <script>
+        function myFunction() {
+            alert("You clicked the coffee cup!");
+        }
+    </script>
+
+    <!--- Exemplo de tabela:--->
+
+    <style>/* elemento css para adicionar borda à tabela */
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+
+
+
+    <table style="width:100%">
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+
+    <!--Exemplo de lista:--->
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+
+    <ol>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ol>
+
+    <dl>
+        <dt>Coffee</dt>
+        <dd>- black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>- white cold drink</dd>
+    </dl>
+
+    <!---Exemplo de utilização de classes:--->
+    <div class="city">
+        <h2>London</h2>
+        <p>London is the capital of England.</p>
+    </div>
+
+    <div class="city">
+        <h2>Paris</h2>
+        <p>Paris is the capital of France.</p>
+    </div>
+
+    <div class="city">
+        <h2>Tokyo</h2>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+
+    <h1 id="myHeader">My Header</h1>
+</body>
+</html>

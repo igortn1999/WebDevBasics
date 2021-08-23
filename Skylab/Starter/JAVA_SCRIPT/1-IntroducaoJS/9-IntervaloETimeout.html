@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Curso Java Script</title>
+</head>
+<body>
+<script>
+    //javaScript
+
+    //um intervalo é um função executada varias vezes dentro de um intervalo
+    function exibeAlgo(){
+        console.log('Hello World');
+    }
+
+    setInterval(exibeAlgo, 1000);//esta função será executada a cada 1s (1000ms)
+    setInterval(exibeAlgo(), 1000);//Neste caso, ele executa apenas uma vez, pois está sendo executada e não apenas referenciada
+
+    setTimeout(exibeAlgo, 5000);//o programa espera 5s para executar o conteudo da função
+</script>
+</body>
+</html>

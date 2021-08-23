@@ -1,0 +1,44 @@
+:root{
+    --title-color: #322153;/*Funciona como o #define em C*/
+    --primary-color: #34cb79;
+}
+
+*{/*seleciona todos*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*faz com que o "conteudo da caixa se ajuste ao tamanho de caixa, e não a caixa ao conteudo*/
+}
+
+html{
+    font-family: 'Roboto Mono', monospace; /*seleciona a fonte utilizada*/
+}
+
+body{
+    background: #f0f0f5;
+}
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h5{
+    font-family: 'Oswald', sans-serif;
+    color: var(--title-color);
+}
+
+/*Box Model- modelo de caixa: Todos os elementos ocupam um espaço (caixa) na tela*/
+/*
+Toda caixa  tem:
+    Largura,altura, espaçamentos, preenchimentos,
+    bordas, cor, fundo, maneira que é vista pelo html(display)
+    alinhamentos
+*/
+
+/*
+    Caixa block: Ocupa toda a linha e o proximo elemento será jogado para a linha de baixo
+    Caixa inline: ocupa somente o espaço "necessário" ou exato de um texto por exemplo
+
+*/
+
+
+
+

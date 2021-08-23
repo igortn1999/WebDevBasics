@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Curso Java Script</title>
+</head>
+<body>
+    <div>
+        <input type="text" name="nome" id="nome" class="nome" />
+        <button class="botao">Adicionar</button>
+    </div>
+<script>
+    //javaScript
+    var inputElement0 = document.getElementById('nome');
+    //document referencia a Árvore de elementos e getElementById busca um elemento por seu ID que adicionamos
+    var inputElement1 = document.getElementsByTagName('inpput');
+    //getElementsByTagName sempre retorna um vetor, pois busca todos os elemntos que tem a tag que está sendo buscada
+    var inputElement2 = document.getElementsByTagName('inpput')[0];//pode-se buscar pelo indice (ordem em que aparece)
+
+    console.log(inputElement0);
+
+    var inputElement3 = document.getElementsByClassName('nome')[1];//funciona como o TagName
+
+    var inputElement4= document.querySelector('body div#app input');
+    //O querry selector permite percorrer toda a addon até encontrar o elemento desejado (ele basicamente busca elementos na tela)
+    console.log(inputElement4);
+
+    //pode-se buscar, por exemplo, os atributos do input
+    var inputElement5= document.querySelector('input[name=nome]');//estes colchetes referenciam um propriedade do elemento input
+
+    console.log(inputElement5)
+    //---------------------------------------------------------------------------------------------------------------------------------
+    var inputElement = document.querySelector('input[name=nome');
+    var btnElement = document.querySelector('button.botao') //button é o tipo da tag e a class foi definida dentro dele
+    //não foi necessario utilizar o proprio HTML para acionar o botao, pois o botao foi "buscado" pelo querySelector
+    btnElement.onclick = function(){
+        var text = inputElement.value;//busca aquilo que o usuario escreveu na caixa do botao
+        alert(text);
+    }
+</script>
+</body>
+</html>

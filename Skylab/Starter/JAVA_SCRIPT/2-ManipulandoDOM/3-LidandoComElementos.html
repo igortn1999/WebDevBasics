@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Curso Java Script</title>
+</head>
+<body>
+<div id="app">
+
+</div>
+<script>
+    //javaScript
+    var linkElement = document.createElement('a');// cria um "link"
+    linkElement.setAttribute('href', 'https://www.fiap.com.br/');
+
+    var textElement = document.createTextNode('Acessar site da fiap');
+    linkElement.appendChild(textElement);//adicionar o textElement com um filho do linkElemnt
+
+    var containerElement = document.querySelector('#app');
+    containerElement.appendChild(linkElement);
+
+</script>
+</body>
+</html>
